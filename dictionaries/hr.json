@@ -1,0 +1,230 @@
+{
+  "nav": {
+    "about": "O Fravizu",
+    "services": "Usluge",
+    "results": "Rezultati",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "cta": "Pošaljite upit"
+  },
+  "hero": {
+    "title1": "AI rješenja koja štede",
+    "title2": "vrijeme i zarađuju —",
+    "title3": "dok vi vodite biznis.",
+    "subtitle": "Automatizacija procesa, implementacija AI-a i funkcionalne web stranice za firme koje žele rezultate, ne obećanja.",
+    "cta_primary": "Pošaljite upit",
+    "cta_secondary": "Pogledajte rezultate",
+    "stat1_value": "10+",
+    "stat1_label": "završenih projekata",
+    "stat2_value": "1.000+",
+    "stat2_label": "sati uštede za klijente",
+    "stat3_value": "10.000€+",
+    "stat3_label": "ušteda ostvareno"
+  },
+  "aboutFraviz": {
+    "badge": "O FRAVIZU",
+    "title": "AI konzultantska firma\nza realne rezultate.",
+    "p1": "Fraviz je AI konzultantska firma iz Hrvatske. Nastala je iz stvarnog iskustva — nakon godina rada u poslovnom konzaltingu i analizi podataka u turizmu, postalo je jasno koliko vremena i novca firme gube na procese koji se mogu automatizirati.",
+    "p2": "Taj uvid doveo je do prvog projekta: automatiziranog sustava za generiranje leadova koji je u nekoliko sati prikupio 1.000+ kontakata i generirao preko 10.000€ prihoda. Od tada, Fraviz pomaže malim i srednjim firmama implementirati AI u svakodnevno poslovanje — konkretno, mjerljivo, bez teorije.",
+    "p3": "Iza Fraviza stoji iskustvo u poslovnom konzaltingu, analizi tržišta i 1-2 godine intenzivnog rada s AI alatima. Fokus nije na tehnologiji radi tehnologije — nego na rezultatima koji se vide u eurima i ušteđenim satima.",
+    "milestone1": "Poslovni konzalting & analiza podataka",
+    "milestone2": "Otkriće potencijala AI automatizacije",
+    "milestone3": "Osnivanje Fraviza — AI implementacija za SMB"
+  },
+  "about": {
+    "badge": "ŠTO FRAVIZ DONOSI",
+    "title": "Što Fraviz donosi vašem biznisu?",
+    "headline": "Automatizacija koja zarađuje dok vi planirate sljedeći korak.",
+    "p1": "Fraviz spaja AI, automatizaciju i moderne alate u sustave koji rade umjesto vas — 24 sata dnevno, 7 dana u tjednu. Od email obrade do ekstrakcije podataka, od web razvoja do poslovne optimizacije.",
+    "p2": "Svaki isporučeni sustav dolazi s mjerljivim rezultatom. Bez naplate za savjete — naplaćuju se uštede.",
+    "tools_label": "Alati koje koristimo",
+    "stat1_value": "10+",
+    "stat1_label": "automatiziranih procesa",
+    "stat2_value": "1.000+",
+    "stat2_label": "kontakata scrapanih u 1h",
+    "stat3_value": "4",
+    "stat3_label": "web stranice isporučene",
+    "stat4_value": "10.000€+",
+    "stat4_label": "ušteda za klijente"
+  },
+  "services": {
+    "badge": "USLUGE",
+    "title": "Kako Fraviz može pomoći?",
+    "items": [
+      {
+        "title": "AI Konzultacija & Optimizacija",
+        "description": "Analiza poslovanja i identifikacija gdje AI može uštedjeti vrijeme i novac. Konkretne preporuke s mjerljivim ROI-em, ne teorija.",
+        "cta": "Automatizirajte proces →"
+      },
+      {
+        "title": "Automatizacija poslovnih procesa",
+        "description": "Automatizacija repetitivnih poslovnih procesa — od email obrade do reportinga. Sustavi koji rade 24/7 bez intervencije.",
+        "cta": "Zatražite ponudu →"
+      },
+      {
+        "title": "Web Scraping & Ekstrakcija Podataka",
+        "description": "Trebate 1.000 mailova, OIB-ova ili kontakata? Gotovo u sat vremena. Legalno, čisto, strukturirano.",
+        "cta": "Započnite projekt →"
+      },
+      {
+        "title": "Web Stranice",
+        "description": "Funkcionalne, brze web stranice — bez klasičnog developerskog procesa. Od ideje do live verzije u danima, ne tjednima.",
+        "cta": "Zatražite ponudu →"
+      },
+      {
+        "title": "AI Strategija & Prompt Engineering",
+        "description": "Kako koristiti ChatGPT, Claude i druge AI alate da stvarno rade za vas. Edukacija, strategija, implementacija.",
+        "cta": "Automatizirajte proces →"
+      },
+      {
+        "title": "No-Code Automatizacija & Integracije",
+        "description": "Povezivanje postojećih alata (Gmail, Sheets, CRM) u automatizirane workflowove. Bez programiranja, s mjerljivim rezultatima.",
+        "cta": "Započnite projekt →"
+      }
+    ]
+  },
+  "caseStudies": {
+    "badge": "REZULTATI",
+    "title": "Brojke, ne priče.",
+    "subtitle": "Svaki projekt donosi mjerljive rezultate. Evo konkretnih primjera.",
+    "cases": [
+      {
+        "tag": "Ekstrakcija podataka",
+        "title": "Ekstrakcija podataka za B2B kampanje",
+        "problem_label": "PROBLEM",
+        "problem": "Klijentu koji se bavi generiranjem leadova trebalo je 1.000+ kontakata za outreach kampanju",
+        "solution_label": "RJEŠENJE",
+        "solution": "Antigravity + Apify API integracija — automatizirani scraping",
+        "result_label": "REZULTAT",
+        "result": "1.000 kontakata (email + kontakt forme) u 1 sat",
+        "note": "Ručno bi trajalo 2+ tjedna.",
+        "metric_value": "1.000",
+        "metric_label": "kontakata u 1h"
+      },
+      {
+        "tag": "Automatizacija",
+        "title": "Automatizacija poslovnih procesa",
+        "problem_label": "PROBLEM",
+        "problem": "Klijent trošio 20+ sati tjedno na repetitivne admin taskove",
+        "solution_label": "RJEŠENJE",
+        "solution": "AI workflow automatizacija — email processing, data entry, reporting",
+        "result_label": "REZULTAT",
+        "result": "1.000+ sati uštede godišnje",
+        "note": "",
+        "metric_value": "10.000€+",
+        "metric_label": "ušteda godišnje"
+      },
+      {
+        "tag": "Web razvoj",
+        "title": "Web prisutnost iz nule",
+        "problem_label": "PROBLEM",
+        "problem": "Klijent bez web stranice, ograničen budžet, hitno treba online prisutnost",
+        "solution_label": "RJEŠENJE",
+        "solution": "No-code build — funkcionalna stranica u 3 dana",
+        "result_label": "REZULTAT",
+        "result": "4 stranice isporučene, sve live i responsive",
+        "note": "",
+        "metric_value": "3 dana",
+        "metric_label": "od ideje do launcha"
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "PROJEKTI",
+    "title": "Projekti",
+    "subtitle": "Odabrani projekti koje je Fraviz isporučio.",
+    "visit": "Posjeti stranicu →",
+    "coming_soon": "Uskoro...",
+    "projects": [
+      {
+        "title": "C24 Gym",
+        "description": "Kompletna web stranica za fitness studio — od dizajna do launcha u nekoliko dana. Uključuje sustav paketa, kalendar treninga i kontakt formu.",
+        "tag": "Web Development",
+        "url": "https://c24gym.com/"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Što drugi kažu",
+    "items": [
+      {
+        "name": "Bepo Stojanov",
+        "role": "CEO, Fortuna Print",
+        "initials": "BS",
+        "text": "Web stranica je bila gotova u roku od par dana. Profesionalno, brzo i bez komplikacija.",
+        "stars": 5
+      },
+      {
+        "name": "Duje Čudina",
+        "role": "CEO, C24 Gym",
+        "initials": "DČ",
+        "text": "Trebali smo modernu stranicu za gym i dobili smo točno to — čisto, funkcionalno i brzo.",
+        "stars": 5
+      },
+      {
+        "name": "Robert Orlović",
+        "role": "CEO, Stolarija Orlović",
+        "initials": "RO",
+        "text": "Odlična suradnja. Stranica je profesionalna i klijenti je odlično prihvaćaju.",
+        "stars": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Česta pitanja",
+    "items": [
+      {
+        "q": "Moram li znati programirati za suradnju s Fravizom?",
+        "a": "Ne. Svi sustavi se isporučuju gotovi i spremni za korištenje. Potrebna je samo osnovna digitalna pismenost — email, Google Sheets i slično."
+      },
+      {
+        "q": "Koliko traje tipični projekt?",
+        "a": "Ovisi o složenosti. Web stranica: 3-7 dana. Automatizacija procesa: 1-3 tjedna. AI konzultacija: dogovor prema potrebi."
+      },
+      {
+        "q": "Koje alate Fraviz koristi?",
+        "a": "Claude Code, Claude AI, Antigravity, Manus, Apify, Next.js — i sve što projekt zahtijeva. Alat se bira prema problemu, ne obrnuto."
+      },
+      {
+        "q": "Koliko to košta?",
+        "a": "Svaki projekt se cijeni individualno prema složenosti i očekivanom ROI-u. Besplatni uvodni poziv služi upravo za procjenu — bez obveze."
+      },
+      {
+        "q": "Radi li Fraviz samo s firmama iz Hrvatske?",
+        "a": "Fokus je na hrvatskom tržištu, ali suradnja je moguća s firmama iz cijele regije i EU."
+      },
+      {
+        "q": "Što ako nisam siguran/na što mi treba?",
+        "a": "Upravo zato postoji besplatni uvodni razgovor. Analiza situacije, identifikacija problema i konkretna preporuka — bez obveze."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Imate problem? Riješimo ga.",
+    "subtitle": "Besplatan poziv od 30 minuta. Bez obveze. Konkretna procjena unutar 24 sata.",
+    "name_label": "Ime",
+    "name_placeholder": "Vaše ime",
+    "email_label": "Email",
+    "email_placeholder": "vas@email.com",
+    "message_label": "Poruka",
+    "message_placeholder": "Opišite kratak problem ili projekt...",
+    "submit": "Pošaljite upit →",
+    "sending": "Šalje se...",
+    "success": "Hvala! Odgovor stiže unutar 24 sata.",
+    "error": "Greška pri slanju. Pokušajte ponovo.",
+    "direct_title": "Ili kontaktirajte Fraviz direktno",
+    "direct_email": "ivan.bobanovic@fraviz.com",
+    "response_note": "Na svaki upit odgovor stiže unutar 24 sata. Za hitne projekte — obično i brže.",
+    "schedule_subject": "Zakazivanje poziva — Fraviz"
+  },
+  "footer": {
+    "copyright": "© 2026 Fraviz. Sva prava pridržana.",
+    "email": "ivan.bobanovic@fraviz.com"
+  },
+  "meta": {
+    "title": "FRAVIZ — AI Automatizacija & Konzalting | Implementacija AI-a za vaše poslovanje",
+    "description": "AI automatizacija koja se mjeri u eurima i satima. Automatizacija procesa, implementacija AI-a i funkcionalne web stranice za firme koje žele rezultate.",
+    "og_title": "FRAVIZ — AI Automatizacija & Konzalting",
+    "og_description": "AI automatizacija koja se mjeri u eurima i satima — ne u obećanjima."
+  }
+}

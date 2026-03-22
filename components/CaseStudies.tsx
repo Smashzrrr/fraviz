@@ -1,196 +1,126 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { X, Sparkles, CheckCircle } from 'lucide-react';
 
-const caseStudies = [
-  {
-    tag: 'Data Extraction',
-    title: 'Data Extraction za B2B Outreach',
-    problem: 'Klijentu trebalo 1.000+ kontakata za outreach kampanju',
-    solution: 'Antigravity + Apify API integracija — automatizirani scraping',
-    result: '1.000 kontakata (email + kontakt forme) u 1 sat',
-    comparison: 'Ručno bi trajalo 2+ tjedna',
-    stat: '1.000',
-    statLabel: 'kontakata u 1h',
-    accentColor: 'from-primary to-blue-400',
-    featured: true,
-  },
-  {
-    tag: 'Automatizacija',
-    title: 'Automatizacija poslovnih procesa',
-    problem: 'Klijent trošio 20+ sati tjedno na repetitivne admin taskove',
-    solution: 'n8n workflow automatizacija — email processing, data entry, reporting',
-    result: '1.000+ sati uštede godišnje',
-    comparison: '10.000€+ ušteda u operativnim troškovima',
-    stat: '10.000€+',
-    statLabel: 'ušteda godišnje',
-    accentColor: 'from-cta to-amber-400',
-    featured: false,
-  },
-  {
-    tag: 'Web Development',
-    title: 'Web prisutnost iz nule',
-    problem: 'Klijent bez web stranice, ograničen budžet, hitno treba online prisutnost',
-    solution: 'No-code build — funkcionalna stranica u 3 dana',
-    result: '3 stranice isporučene, sve live i responsive',
-    comparison: 'Bez klasičnog dev troška',
-    stat: '3 dana',
-    statLabel: 'od ideje do launcha',
-    accentColor: 'from-accent to-purple-400',
-    featured: false,
-  },
-];
+/* eslint-disable @typescript-eslint/no-explicit-any */
+interface CaseStudiesProps {
+  dict: any;
+}
 
-export default function CaseStudies() {
-  const featured = caseStudies[0];
-  const rest = caseStudies.slice(1);
-
+export default function CaseStudies({ dict }: CaseStudiesProps) {
   return (
-    <section id="results" className="py-24 sm:py-32 relative">
-      {/* Distinct background — gradient shift + pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-surface/30 to-background" />
-        <div
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(245,158,11,0.4) 1px, transparent 0)`,
-            backgroundSize: '40px 40px',
-          }}
-        />
-        <div
-          className="absolute top-0 left-1/3 w-[700px] h-[400px] rounded-full opacity-8 blur-[150px]"
-          style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%)' }}
-        />
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="results" className="py-16 sm:py-20 bg-surface/20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="mb-16"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-poppins)] mb-4">
-            Brojke, ne priče.
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-cta/10 text-cta border border-cta/20 uppercase mb-4">
+            {dict.badge}
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-poppins)]">
+            {dict.title}
           </h2>
-          <p className="text-muted text-lg max-w-2xl">
-            Svaki projekt donosi mjerljive rezultate. Evo konkretnih primjera.
-          </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cta to-accent rounded-full mt-6" />
+          <p className="text-muted mt-2">{dict.subtitle}</p>
+          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mt-4" />
         </motion.div>
 
-        {/* Featured case study — full width, large */}
+        {/* Featured case study — first one large */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="rounded-2xl border border-border bg-surface/30 overflow-hidden mb-6"
         >
-          <div className="group relative overflow-hidden rounded-2xl bg-surface/50 border border-border hover:border-cta/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 hover:shadow-cta/10">
-            <div className="flex flex-col md:flex-row gap-0">
-              {/* Content */}
-              <div className="flex-1 p-8 sm:p-10 space-y-6">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cta/10 text-cta border border-cta/20">
-                  {featured.tag}
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-bold font-[family-name:var(--font-poppins)] text-foreground">
-                  {featured.title}
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center mt-0.5">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="text-xs font-medium text-muted-dark uppercase tracking-wider">Problem</span>
-                      <p className="text-muted mt-0.5">{featured.problem}</p>
-                    </div>
+          <div className="grid lg:grid-cols-5">
+            <div className="lg:col-span-3 p-8">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cta/10 text-cta border border-cta/20 mb-4">
+                {dict.cases[0].tag}
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold font-[family-name:var(--font-poppins)] text-foreground mb-6">
+                {dict.cases[0].title}
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <X className="w-4 h-4 text-red-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-xs font-semibold text-red-400 tracking-wider">{dict.cases[0].problem_label}</span>
+                    <p className="text-sm text-muted mt-1">{dict.cases[0].problem}</p>
                   </div>
-                  <div className="flex gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mt-0.5">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="text-xs font-medium text-muted-dark uppercase tracking-wider">Rješenje</span>
-                      <p className="text-muted mt-0.5">{featured.solution}</p>
-                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Sparkles className="w-4 h-4 text-amber-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-xs font-semibold text-amber-400 tracking-wider">{dict.cases[0].solution_label}</span>
+                    <p className="text-sm text-muted mt-1">{dict.cases[0].solution}</p>
                   </div>
-                  <div className="flex gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 text-green-400 flex items-center justify-center mt-0.5">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="text-xs font-medium text-muted-dark uppercase tracking-wider">Rezultat</span>
-                      <p className="text-foreground font-medium mt-0.5">{featured.result}</p>
-                      <p className="text-sm text-muted">{featured.comparison}</p>
-                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-xs font-semibold text-emerald-400 tracking-wider">{dict.cases[0].result_label}</span>
+                    <p className="text-sm text-foreground font-medium mt-1">{dict.cases[0].result}</p>
+                    {dict.cases[0].note && <p className="text-xs text-muted mt-0.5">{dict.cases[0].note}</p>}
                   </div>
                 </div>
               </div>
-
-              {/* Big stat — right panel */}
-              <div className="flex flex-col items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10 border-l border-border p-8 md:p-10 min-w-[280px]">
-                <div className="text-center w-full">
-                  <div className={`text-6xl sm:text-7xl lg:text-8xl font-black font-[family-name:var(--font-poppins)] bg-gradient-to-r ${featured.accentColor} bg-clip-text text-transparent leading-tight break-words mx-auto`}>
-                    {featured.stat}
-                  </div>
-                  <div className="text-sm font-medium text-muted mt-3">{featured.statLabel}</div>
+            </div>
+            <div className="lg:col-span-2 flex items-center justify-center p-8 bg-primary/5">
+              <div className="text-center">
+                <div className="text-[2.5rem] leading-[1] min-[400px]:text-5xl sm:text-6xl lg:text-7xl font-black font-[family-name:var(--font-poppins)] text-primary/80 tracking-tighter break-words">
+                  {dict.cases[0].metric_value}
                 </div>
+                <div className="text-sm text-muted mt-2">{dict.cases[0].metric_label}</div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Remaining case studies — 2-column grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {rest.map((cs, i) => (
+        {/* Two smaller cases */}
+        <div className="grid sm:grid-cols-2 gap-6">
+          {dict.cases.slice(1).map((cs: any, i: number) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: (i + 1) * 0.15 }}
-              className="group relative overflow-hidden rounded-2xl bg-surface/40 border border-border hover:border-cta/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-cta/5"
+              transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+              className="rounded-2xl border border-border bg-surface/30 overflow-hidden"
             >
-              <div className="p-8">
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  <div>
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cta/10 text-cta border border-cta/20 mb-3">
-                      {cs.tag}
-                    </span>
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-poppins)] text-foreground">
-                      {cs.title}
-                    </h3>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <div className={`text-3xl sm:text-4xl font-black font-[family-name:var(--font-poppins)] bg-gradient-to-r ${cs.accentColor} bg-clip-text text-transparent`}>
-                      {cs.stat}
+              <div className="p-6 flex flex-col sm:flex-row gap-6">
+                <div className="flex-1">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cta/10 text-cta border border-cta/20 mb-3">
+                    {cs.tag}
+                  </span>
+                  <h3 className="text-lg font-bold font-[family-name:var(--font-poppins)] text-foreground mb-4">
+                    {cs.title}
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-muted">{cs.problem}</p>
                     </div>
-                    <div className="text-xs text-muted mt-0.5">{cs.statLabel}</div>
+                    <div className="flex items-start gap-2">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-400 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-muted">{cs.solution}</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-foreground font-medium">{cs.result}</p>
+                    </div>
                   </div>
                 </div>
-
-                <div className="space-y-3 text-sm">
-                  <div className="flex gap-2">
-                    <span className="text-red-400 flex-shrink-0">✕</span>
-                    <span className="text-muted">{cs.problem}</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="text-primary flex-shrink-0">⚡</span>
-                    <span className="text-muted">{cs.solution}</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="text-green-400 flex-shrink-0">✓</span>
-                    <span className="text-foreground font-medium">{cs.result}</span>
+                <div className="flex items-center justify-center sm:min-w-[140px]">
+                  <div className="text-center">
+                    <div className="text-[1.75rem] leading-[1.1] min-[400px]:text-3xl lg:text-4xl font-black font-[family-name:var(--font-poppins)] text-cta tracking-tighter break-words">
+                      {cs.metric_value}
+                    </div>
+                    <div className="text-xs text-muted mt-1">{cs.metric_label}</div>
                   </div>
                 </div>
               </div>

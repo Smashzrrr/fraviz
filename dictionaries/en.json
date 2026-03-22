@@ -1,0 +1,230 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "results": "Results",
+    "blog": "Blog",
+    "contact": "Contact",
+    "cta": "Send Inquiry"
+  },
+  "hero": {
+    "title1": "AI solutions that save",
+    "title2": "time and generate revenue —",
+    "title3": "while you run the business.",
+    "subtitle": "Process automation, AI implementation, and functional websites for companies that want results, not promises.",
+    "cta_primary": "Send Inquiry",
+    "cta_secondary": "See Results",
+    "stat1_value": "10+",
+    "stat1_label": "completed projects",
+    "stat2_value": "1,000+",
+    "stat2_label": "hours saved for clients",
+    "stat3_value": "€10,000+",
+    "stat3_label": "savings generated"
+  },
+  "aboutFraviz": {
+    "badge": "ABOUT FRAVIZ",
+    "title": "AI consulting firm\nfor real results.",
+    "p1": "Fraviz is an AI consulting firm from Croatia. It was born from real-world experience — after years of working in business consulting and data analysis in the tourism industry, it became clear how much time and money companies waste on processes that can be automated.",
+    "p2": "That insight led to the first project: an automated lead generation system that collected 1,000+ contacts in a few hours and generated over €10,000 in revenue. Since then, Fraviz helps small and medium businesses implement AI into their daily operations — concrete, measurable, no theory.",
+    "p3": "Behind Fraviz is experience in business consulting, market analysis, and 1-2 years of intensive work with AI tools. The focus isn't on technology for technology's sake — but on results measured in euros and hours saved.",
+    "milestone1": "Business consulting & data analysis",
+    "milestone2": "Discovering the potential of AI automation",
+    "milestone3": "Founding Fraviz — AI implementation for SMBs"
+  },
+  "about": {
+    "badge": "WHAT FRAVIZ DELIVERS",
+    "title": "What Fraviz brings to your business?",
+    "headline": "Automation that generates revenue while you plan your next move.",
+    "p1": "Fraviz combines AI, automation, and modern tools into systems that work for you — 24 hours a day, 7 days a week. From email processing to data extraction, from web development to business optimization.",
+    "p2": "Every delivered system comes with measurable results. No charge for advice — results are what count.",
+    "tools_label": "Tools we use",
+    "stat1_value": "10+",
+    "stat1_label": "automated processes",
+    "stat2_value": "1,000+",
+    "stat2_label": "contacts scraped in 1h",
+    "stat3_value": "4",
+    "stat3_label": "websites delivered",
+    "stat4_value": "€10,000+",
+    "stat4_label": "savings for clients"
+  },
+  "services": {
+    "badge": "SERVICES",
+    "title": "How can Fraviz help?",
+    "items": [
+      {
+        "title": "AI Consultation & Optimization",
+        "description": "Business analysis and identification of where AI can save time and money. Concrete recommendations with measurable ROI, not theory.",
+        "cta": "Automate a process →"
+      },
+      {
+        "title": "Business Process Automation",
+        "description": "Automation of repetitive business processes — from email handling to reporting. Systems that work 24/7 without intervention.",
+        "cta": "Request a quote →"
+      },
+      {
+        "title": "Web Scraping & Data Extraction",
+        "description": "Need 1,000 emails, tax IDs, or contacts? Done in an hour. Legal, clean, structured.",
+        "cta": "Start a project →"
+      },
+      {
+        "title": "Websites",
+        "description": "Functional, fast websites — without the traditional development process. From idea to live version in days, not weeks.",
+        "cta": "Request a quote →"
+      },
+      {
+        "title": "AI Strategy & Prompt Engineering",
+        "description": "How to use ChatGPT, Claude, and other AI tools to actually work for you. Training, strategy, implementation.",
+        "cta": "Automate a process →"
+      },
+      {
+        "title": "No-Code Automation & Integrations",
+        "description": "Connecting existing tools (Gmail, Sheets, CRM) into automated workflows. No coding required, with measurable results.",
+        "cta": "Start a project →"
+      }
+    ]
+  },
+  "caseStudies": {
+    "badge": "RESULTS",
+    "title": "Numbers, not stories.",
+    "subtitle": "Every project delivers measurable results. Here are concrete examples.",
+    "cases": [
+      {
+        "tag": "Data Extraction",
+        "title": "Data Extraction for B2B Campaigns",
+        "problem_label": "PROBLEM",
+        "problem": "A client in lead generation needed 1,000+ contacts for an outreach campaign",
+        "solution_label": "SOLUTION",
+        "solution": "Antigravity + Apify API integration — automated scraping",
+        "result_label": "RESULT",
+        "result": "1,000 contacts (email + contact forms) in 1 hour",
+        "note": "Manual work would take 2+ weeks.",
+        "metric_value": "1,000",
+        "metric_label": "contacts in 1h"
+      },
+      {
+        "tag": "Automation",
+        "title": "Business Process Automation",
+        "problem_label": "PROBLEM",
+        "problem": "Client spent 20+ hours weekly on repetitive admin tasks",
+        "solution_label": "SOLUTION",
+        "solution": "AI workflow automation — email processing, data entry, reporting",
+        "result_label": "RESULT",
+        "result": "1,000+ hours saved annually",
+        "note": "",
+        "metric_value": "€10,000+",
+        "metric_label": "annual savings"
+      },
+      {
+        "tag": "Web Development",
+        "title": "Web Presence from Scratch",
+        "problem_label": "PROBLEM",
+        "problem": "Client with no website, limited budget, urgently needed online presence",
+        "solution_label": "SOLUTION",
+        "solution": "No-code build — functional website in 3 days",
+        "result_label": "RESULT",
+        "result": "4 websites delivered, all live and responsive",
+        "note": "",
+        "metric_value": "3 days",
+        "metric_label": "from idea to launch"
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "PROJECTS",
+    "title": "Projects",
+    "subtitle": "Selected projects delivered by Fraviz.",
+    "visit": "Visit website →",
+    "coming_soon": "Coming soon...",
+    "projects": [
+      {
+        "title": "C24 Gym",
+        "description": "Complete website for a fitness studio — from design to launch in a few days. Includes pricing packages, training calendar, and contact form.",
+        "tag": "Web Development",
+        "url": "https://c24gym.com/"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What others say",
+    "items": [
+      {
+        "name": "Bepo Stojanov",
+        "role": "CEO, Fortuna Print",
+        "initials": "BS",
+        "text": "The website was ready in just a few days. Professional, fast, and hassle-free.",
+        "stars": 5
+      },
+      {
+        "name": "Duje Čudina",
+        "role": "CEO, C24 Gym",
+        "initials": "DČ",
+        "text": "We needed a modern website for the gym and got exactly that — clean, functional, and fast.",
+        "stars": 5
+      },
+      {
+        "name": "Robert Orlović",
+        "role": "CEO, Stolarija Orlović",
+        "initials": "RO",
+        "text": "Great collaboration. The website is professional and clients respond to it positively.",
+        "stars": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Do I need to know how to code to work with Fraviz?",
+        "a": "No. All systems are delivered ready to use. Only basic digital literacy is needed — email, Google Sheets, and similar tools."
+      },
+      {
+        "q": "How long does a typical project take?",
+        "a": "It depends on complexity. Website: 3-7 days. Process automation: 1-3 weeks. AI consultation: arranged as needed."
+      },
+      {
+        "q": "What tools does Fraviz use?",
+        "a": "Claude Code, Claude AI, Antigravity, Manus, Apify, Next.js — and whatever the project requires. The tool is chosen for the problem, not the other way around."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "Each project is priced individually based on complexity and expected ROI. The free introductory call is exactly for this assessment — no obligation."
+      },
+      {
+        "q": "Does Fraviz only work with companies from Croatia?",
+        "a": "The focus is on the Croatian market, but collaboration is possible with companies from across the region and the EU."
+      },
+      {
+        "q": "What if I'm not sure what I need?",
+        "a": "That's exactly what the free introductory call is for. Situation analysis, problem identification, and a concrete recommendation — no obligation."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Have a problem? Let's solve it.",
+    "subtitle": "Free 30-minute call. No obligation. Concrete assessment within 24 hours.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "you@email.com",
+    "message_label": "Message",
+    "message_placeholder": "Briefly describe your problem or project...",
+    "submit": "Send Inquiry →",
+    "sending": "Sending...",
+    "success": "Thank you! Response within 24 hours.",
+    "error": "Error sending. Please try again.",
+    "direct_title": "Or contact Fraviz directly",
+    "direct_email": "ivan.bobanovic@fraviz.com",
+    "response_note": "Every inquiry gets a response within 24 hours. For urgent projects — usually faster.",
+    "schedule_subject": "Schedule a call — Fraviz"
+  },
+  "footer": {
+    "copyright": "© 2026 Fraviz. All rights reserved.",
+    "email": "ivan.bobanovic@fraviz.com"
+  },
+  "meta": {
+    "title": "FRAVIZ — AI Automation & Consulting | AI Implementation for Your Business",
+    "description": "AI automation measured in euros and hours. Process automation, AI implementation, and functional websites for companies that want results.",
+    "og_title": "FRAVIZ — AI Automation & Consulting",
+    "og_description": "AI automation measured in euros and hours — not in promises."
+  }
+}

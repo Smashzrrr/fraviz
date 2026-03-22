@@ -2,96 +2,73 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Plus, Minus } from 'lucide-react';
 
-const faqs = [
-  {
-    question: 'Moram li znati programirati da radim s tobom?',
-    answer:
-      'Ne. Sve što radim je dizajnirano da bude razumljivo i upotrebljivo bez tehničkog znanja.',
-  },
-  {
-    question: 'Koliko traje tipični projekt?',
-    answer:
-      'Ovisno o složenosti — od par dana za web scraping ili jednostavnu automatizaciju, do 2-4 tjedna za kompleksnije sustave.',
-  },
-  {
-    question: 'Koje alate koristiš?',
-    answer:
-      'n8n za automatizaciju, Claude/ChatGPT za AI, Antigravity i Apify za scraping, Next.js za web. Ali alat biram prema problemu — ne obrnuto.',
-  },
-  {
-    question: 'Koliko to košta?',
-    answer:
-      'Svaki projekt je drugačiji. Javite se za besplatan poziv i dajem vam procjenu unutar 24 sata.',
-  },
-  {
-    question: 'Radiš li samo s firmama iz Hrvatske?',
-    answer:
-      'Ne — radim remote s klijentima iz cijele regije. Komunikacija na hrvatskom, engleskom ili po dogovoru.',
-  },
-  {
-    question: 'Što ako nisam siguran/na što mi treba?',
-    answer:
-      'Zato postoji besplatan poziv. U 30 minuta identificiramo vaš najveći bottleneck i predložim konkretno rješenje.',
-  },
-];
+/* eslint-disable @typescript-eslint/no-explicit-any */
+interface FAQProps {
+  dict: any;
+}
 
-export default function FAQ() {
+export default function FAQ({ dict }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: dict.items.map((item: any) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
   };
 
   return (
-    <section id="faq" className="py-24 sm:py-32 relative">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-poppins)] mb-4">
-            Česta pitanja
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
-        </motion.div>
+    <section id="faq" className="py-16 sm:py-20">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-3"
+          className="text-center mb-10"
         >
-          {faqs.map((faq, i) => (
-            <div
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-poppins)] italic">
+            {dict.title}
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-cta to-accent rounded-full mx-auto mt-4" />
+        </motion.div>
+
+        <div className="space-y-3">
+          {dict.items.map((item: any, i: number) => (
+            <motion.div
               key={i}
-              className={`rounded-xl border transition-all duration-300 ${
-                openIndex === i
-                  ? 'border-primary/30 bg-surface/60'
-                  : 'border-border bg-surface/20 hover:border-border hover:bg-surface/40'
-              }`}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="rounded-xl border border-border bg-surface/20 overflow-hidden"
             >
               <button
-                onClick={() => toggle(i)}
-                className="w-full flex items-center justify-between p-6 text-left"
-                aria-expanded={openIndex === i}
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex items-center justify-between p-5 text-left"
               >
-                <span className="text-base sm:text-lg font-medium font-[family-name:var(--font-poppins)] text-foreground pr-4">
-                  {faq.question}
+                <span className="text-sm sm:text-base font-semibold text-foreground pr-4">
+                  {item.q}
                 </span>
-                <motion.span
-                  animate={{ rotate: openIndex === i ? 45 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                  </svg>
-                </motion.span>
+                {openIndex === i ? (
+                  <Minus className="w-5 h-5 text-cta flex-shrink-0" />
+                ) : (
+                  <Plus className="w-5 h-5 text-muted flex-shrink-0" />
+                )}
               </button>
               <AnimatePresence>
                 {openIndex === i && (
@@ -99,18 +76,18 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 text-muted leading-relaxed">
-                      {faq.answer}
+                    <div className="px-5 pb-5 text-sm text-muted leading-relaxed">
+                      {item.a}
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
