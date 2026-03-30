@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import CookieConsent from "@/components/CookieConsent";
 import { getDictionary, type Locale, locales } from "@/lib/i18n";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -95,6 +96,7 @@ export default async function LocaleLayout({
         <Navbar dict={dict.nav} locale={locale} />
         {children}
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
