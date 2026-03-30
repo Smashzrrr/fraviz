@@ -40,46 +40,52 @@ export default function Portfolio({ dict }: PortfolioProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group rounded-2xl border border-border bg-surface/30 overflow-hidden hover:border-cta/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-cta/5 transition-all duration-300"
+              className="group flex flex-col rounded-2xl border border-border bg-surface/30 overflow-hidden hover:border-cta/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-cta/5 transition-all duration-300 h-full"
             >
-              {/* Gradient header */}
-              <div className="h-40 bg-gradient-to-br from-cta/10 to-accent/10 flex items-center justify-center relative">
-                <span className="text-4xl font-black font-[family-name:var(--font-poppins)] text-foreground/20 group-hover:text-foreground/30 transition-colors">
-                  {project.title}
-                </span>
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              {/* Image header */}
+              <div className="h-48 relative overflow-hidden bg-gradient-to-br from-surface to-surface-secondary flex items-center justify-center p-8">
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-sm" />
+                ) : (
+                  <span className="text-4xl font-black font-[family-name:var(--font-poppins)] text-foreground/20 group-hover:text-foreground/30 transition-colors">
+                    {project.title}
+                  </span>
+                )}
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10">
                   <ExternalLink className="w-4 h-4 text-cta" />
                 </div>
+                {/* Subtle gradient overlay to ensure text is readable if we want to place text, but we don't here */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity" />
               </div>
-              <div className="p-5">
-                <span className="inline-block px-2 py-0.5 rounded text-xs font-medium bg-cta/10 text-cta mb-2">
+              <div className="p-6 flex flex-col flex-grow">
+                <span className="inline-block px-2 py-0.5 rounded text-xs font-medium bg-cta/10 text-cta mb-3 self-start">
                   {project.tag}
                 </span>
-                <h3 className="text-lg font-semibold font-[family-name:var(--font-poppins)] text-foreground mb-2">
+                <h3 className="text-xl font-semibold font-[family-name:var(--font-poppins)] text-foreground mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed mb-3">
+                <p className="text-sm text-muted leading-relaxed mb-4 flex-grow">
                   {project.description}
                 </p>
-                <span className="inline-flex items-center text-sm font-medium text-cta group-hover:text-cta-dark transition-colors">
+                <span className="inline-flex items-center text-sm font-medium text-cta group-hover:text-cta-dark transition-colors mt-auto">
                   {dict.visit}
-                  <ExternalLink className="ml-1 w-3.5 h-3.5" />
+                  <ExternalLink className="ml-1.5 w-4 h-4" />
                 </span>
               </div>
             </motion.a>
           ))}
 
-          {/* Coming soon placeholders */}
-          {[1, 2].map((i) => (
+          {/* Coming soon placeholders (Dynamically limit to exactly 3 total cards max) */}
+          {Array.from({ length: Math.max(0, 3 - dict.projects.length) }).map((_, i) => (
             <motion.div
               key={`placeholder-${i}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (dict.projects.length + i) * 0.1 }}
-              className="rounded-2xl border border-dashed border-border/60 bg-surface/10 flex flex-col items-center justify-center min-h-[280px] text-center p-6"
+              className="rounded-2xl border border-dashed border-border/60 bg-surface/10 flex flex-col items-center justify-center min-h-[350px] text-center p-6 h-full"
             >
-              <Clock className="w-8 h-8 text-muted-dark mb-3" />
+              <Clock className="w-8 h-8 text-muted-dark mb-4 group-hover:text-cta transition-colors" />
               <span className="text-sm text-muted-dark font-medium">{dict.coming_soon}</span>
             </motion.div>
           ))}
