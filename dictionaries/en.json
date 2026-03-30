@@ -141,6 +141,12 @@
         "description": "Complete website for a fitness studio — from design to launch in a few days. Includes pricing packages, training calendar, and contact form.",
         "tag": "Web Development",
         "url": "https://c24gym.com/"
+      },
+      {
+        "title": "Stolarija Orlović",
+        "description": "Modern and fast website for ALU and PVC carpentry production and installation. Focused on load speed, SEO, and conversions.",
+        "tag": "Web Development",
+        "url": "https://www.alupvcorlovic.com/"
       }
     ]
   },

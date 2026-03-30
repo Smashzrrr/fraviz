@@ -15,9 +15,7 @@ interface NavbarProps {
 }
 
 const HrFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" className="w-5 h-5 rounded-[4px] object-cover flex-shrink-0">
-    <path fill="#02418a" d="M0 320h640v160H0z"/><path fill="#fff" d="M0 160h640v160H0z"/><path fill="#f00010" d="M0 0h640v160H0z"/><g transform="scale(3.11666) translate(40.24)"><path fill="#03A9F4" d="M57.9 33.7c1.4.3 2 1.9 1 3h-2.3v30.4s-3.7 9.8-15.4 9.8c-11.7 0-15.4-9.8-15.4-9.8V36.7H23.5c-1-1.1-.4-2.7 1-3H58z"/><path fill="#fff" d="M30 45.4h4.4v4.4H30zm8.7 0h4.3v4.4h-4.3zm8.7 0h4.4v4.4h-4.4zm-17.4 8.6h4.4v4.3H30zm8.7 0h4.3v4.3h-4.3zm8.7 0h4.4v4.3h-4.4zm-13 8.6h4.3v4.4h-4.3zm8.7 0h4.3v4.4h-4.3z"/><path fill="#f00010" d="M34.4 36.7h4.3v4.4h-4.3zm8.7 0h4.3v4.4h-4.3zm-13 8.7h4.3v4.4h-4.3zm8.7 0h4.3v4.4h-4.3zm8.7 0h4.4v4.4h-4.4zm-21.7 8.6h4.4v4.3H26zm8.6 0h4.4v4.3h-4.4zm8.7 0h4.3v4.3h-4.3zm8.7 0h4.4v4.3h-4.4zm-21.7 8.6h4.4v4.4H26zm8.6 0h4.4v4.4h-4.4zm8.7 0h4.3v4.4h-4.3zm-4.4 8.7h4.3v4.3h-4.3zm-8.6 0h4.4v4.3h-4.4z"/><path fill="#02418a" d="M26 31.8h5.3v3c-1 3.5-3.6 4.7-6.5 4.8 2.2-3 2.9-6.3 1.2-7.8zM31.3 31.8h5.4v3c-1 3.5-3.7 4.7-6.6 4.8 2.3-3 3-6.3 1.2-7.8z"/><path fill="#03A9F4" d="M36.7 31.8h5.4v3c-1 3.5-3.7 4.7-6.6 4.8 2.3-3 3-6.3 1.2-7.8z"/><path fill="#02418a" d="M42 31.8h5.5v3c-1 3.5-3.7 4.7-6.6 4.8 2.3-3 3-6.3 1.1-7.8zM47.5 31.8H53v3c-1 3.5-3.8 4.7-6.6 4.8 2.3-3 3-6.3 1.1-7.8z"/><path fill="#f00010" d="M49 32.8s-.3.7-.8 1c.2-.5 0-1-.1-1.2.4 0 .9.2.9.2zM29 33.5s-.8-2-1.8.2L28 35l1-1.5zM33 34.6l-1 1-1-1v1l1-1z"/><path fill="#ff0" d="M34 32.8l2-1-1 3z"/><path fill="#000" d="M38.8 33c-.1.3-.4 1-.3 1v.7c-1 0-.9-.7-.9-.7zM43 33c.4 1 1.7 1.8 1.7 1.8V35c-.8 0-1.7-.8-1.7-.8z"/><path fill="#ff0" d="M44 33s.6.5 1 1v.5s-.3-.5-1-1zM48.2 32.8s0 1-1 1c0 0 .7.3 1 1v-2z"/></g>
-  </svg>
+  <img src="/cro_flag.png" alt="Croatia Flag" className="w-5 h-5 rounded-[4px] object-cover flex-shrink-0" />
 );
 
 const EnFlag = () => (
